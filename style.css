@@ -1,0 +1,84 @@
+/* Global styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f9fc;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+h1, h2, h3 {
+  color: #1a1a1a;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0057b8;
+}
+
+/* Links */
+a {
+  color: #0057b8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
+  font-size: 16px;
+}
+
+/* Code blocks */
+pre, code {
+  background-color: #eef1f5;
+  padding: 8px;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95em;
+}
+
+/* Navigation bar (optional) */
+.navbar {
+  background-color: #0057b8;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* Section spacing */
+section {
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e6ea;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  color: #666;
+}
