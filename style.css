@@ -1,92 +1,262 @@
 /* style.css */
-body {
-  margin: 0;
-  font-family: 'Share Tech Mono', monospace;
-  background-color: #121212;
-  color: #e0e0e0;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 40px 20px;
+:root {
+  --primary: #2D3250;      /* Deep blue-gray */
+  --secondary: #424769;    /* Lighter blue-gray */
+  --accent: #676FA3;       /* Muted purple-blue */
+  --highlight: #A6B1E1;    /* Soft lavender */
+  --text: #424769;         /* Dark gray for text */
+  --light-text: #F4F4F4;   /* Light text */
+  --background: #F8F9FA;   /* Light gray background */
+  --card-bg: #FFFFFF;      /* White for cards */
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/* Navigation */
 .navbar {
-  background-color: #1e1e1e;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #444;
-  width: 100%;
+  background-color: var(--primary);
   position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px var(--shadow);
 }
 
-.navbar a {
-  color: #00bcd4;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-.container {
-  padding: 80px 40px 40px; /* top padding added for fixed navbar */
-  max-width: 900px;
+.nav-content {
+  max-width: 1200px;
   margin: 0 auto;
-  background: #1c1c1c;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
-  text-align: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1, h2, h3 {
-  color: #00bcd4;
-  margin-bottom: 20px;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-section {
-  margin-bottom: 60px;
-}
-
-a {
-  color: #00bcd4;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  background-color: #1e1e1e;
-  color: #888;
-  text-align: center;
-  padding: 20px 0;
-  border-top: 1px solid #444;
-  font-size: 14px;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-}
-
-iframe {
-  max-width: 100%;
-  border: none;
+.logo {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--light-text);
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  background-color: var(--accent);
   border-radius: 8px;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+}
+
+.nav-links a {
+  color: var(--light-text);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--highlight);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: 8rem 2rem 4rem;
+  color: var(--light-text);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: var(--highlight);
+  margin-bottom: 2rem;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-icon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.project-icon .material-icons {
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.project-card h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background-color: var(--highlight);
+  color: var(--primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Video Section */
+.video-section {
+  background-color: var(--secondary);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--light-text);
+  border-radius: 12px;
+  margin: 4rem 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--highlight);
+  color: var(--primary);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  margin-top: 2rem;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+/* Downloads Section */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.download-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.download-card .material-icons {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: var(--light-text);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: var(--accent);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: var(--light-text);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
