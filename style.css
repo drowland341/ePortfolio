@@ -1,4 +1,7 @@
 /* style.css */
+/* Import a more elegant font - Playfair Display for headings */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
 :root {
   --primary: #ffffff;      /* Pure white */
   --secondary: #f8f8f8;    /* Very light gray */
@@ -12,6 +15,9 @@
   --gradient-dark: linear-gradient(135deg, #2a2a2a 0%, #404040 100%);
   --gradient-light: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
   --border: #f0f0f0;       /* Light border color */
+  /* Add typography variables */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 * {
@@ -21,20 +27,18 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
+  letter-spacing: -0.01em;
   color: var(--text);
   background-color: var(--background);
 }
 
 /* Navigation */
 .navbar {
-  background-color: var(--primary);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 15px var(--shadow);
+  background-color: transparent;
+  position: absolute;
+  box-shadow: none;
 }
 
 .nav-content {
@@ -47,13 +51,11 @@ body {
 }
 
 .logo {
-  font-family: 'Share Tech Mono', monospace;
-  color: var(--light-text);
-  font-size: 1.8rem;
-  font-weight: bold;
-  padding: 0.5rem;
-  background-color: var(--accent);
-  border-radius: 8px;
+  font-family: var(--font-heading);
+  color: var(--text);
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 0;
 }
 
 .nav-links a {
@@ -70,42 +72,41 @@ body {
 
 /* Hero Section */
 .hero {
-  background: var(--gradient-dark);
-  padding: 12rem 2rem 10rem;
-  color: var(--light-text);
-  text-align: center;
+  background: var(--primary);
+  padding: 8rem 2rem 6rem;
+  color: var(--text);
   position: relative;
-  overflow: hidden;
+  border-bottom: 1px solid var(--border);
 }
 
 .hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 150px;
-  background: var(--background);
-  clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
+  display: none; /* Remove the diagonal shape */
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .subtitle {
-  font-size: 1.8rem;
-  color: var(--highlight);
-  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .intro {
-  max-width: 800px;
+  max-width: 650px;
   margin: 0 auto;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--text);
 }
 
 /* Container */
@@ -120,11 +121,10 @@ body {
   padding: 4rem 0;
 }
 
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: var(--primary);
-  text-align: center;
+h2, h3 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 /* Project Cards Layout */
@@ -161,9 +161,9 @@ h2 {
 }
 
 .project-card h3 {
-  color: var(--primary);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
 }
 
 .tech-stack {
@@ -174,10 +174,14 @@ h2 {
 }
 
 .tech-tag {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
   background: var(--accent);
   color: var(--text);
   padding: 0.7rem 1.4rem;
-  font-weight: 500;
 }
 
 /* Project Screenshots */
@@ -207,10 +211,10 @@ h2 {
 
 /* Coverage Comparison */
 .coverage-comparison {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   background: var(--primary);
   border: 1px solid var(--border);
   padding: 3rem;
@@ -218,19 +222,21 @@ h2 {
 }
 
 .coverage-image {
-  position: relative;
+  width: 100%;
 }
 
 .coverage-image p {
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
 }
 
 .coverage-image img {
   width: 100%;
+  max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 8px 24px var(--shadow);
+  box-shadow: 0 15px 35px var(--shadow);
 }
 
 /* Downloads Section */
@@ -268,18 +274,21 @@ h2 {
 }
 
 .button, .download-button {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
   background: var(--gradient-dark);
   color: var(--light-text);
   padding: 1.2rem 2.4rem;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: 500;
   transition: all 0.3s ease;
   border: none;
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  letter-spacing: 0.5px;
 }
 
 .button:hover, .download-button:hover {
@@ -312,6 +321,28 @@ footer p {
   margin: 0.5rem 0;
 }
 
+/* Professional Assessment section */
+#self-assessment {
+  background: var(--gradient-light);
+  padding: 4rem;
+  margin-top: 4rem;
+  border-radius: 2px;
+  box-shadow: 0 15px 35px var(--shadow);
+}
+
+#self-assessment h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+#self-assessment p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
@@ -319,7 +350,7 @@ footer p {
   }
   
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   
   .subtitle {
@@ -337,9 +368,31 @@ footer p {
   .project-card {
     padding: 2rem;
   }
+  
+  .hero {
+    padding: 6rem 1.5rem 4rem;
+  }
 }
 
 /* Improve spacing between sections */
 section {
   margin: 8rem 0;
+}
+
+/* Update section headers */
+.projects h2 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--text);
+}
+
+/* Update project card headers */
+.project-card h3 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  text-align: left;
 }
