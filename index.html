@@ -3,47 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Douglas Rowland | ePortfolio</title>
+  <title>Douglas Rowland | Software Engineer Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Add Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <div class="navbar">
-    <a href="#about">About Me</a>
-    <a href="#artifacts">Artifacts</a>
-    <a href="#code-review">Code Review</a>
-    <a href="#downloads">Downloads</a>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">DR</div>
+      <div class="nav-links">
+        <a href="#about">About Me</a>
+        <a href="#artifacts">Projects</a>
+        <a href="#code-review">Code Review</a>
+        <a href="#downloads">Downloads</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="container">
+      <section id="about">
+        <h1>Douglas Rowland</h1>
+        <h2 class="subtitle">Software Engineer</h2>
+        <p class="intro">Welcome to my Computer Science ePortfolio. This showcase demonstrates my expertise in software development, testing, and engineering best practices through carefully crafted projects.</p>
+      </section>
+    </div>
   </div>
 
   <div class="container">
-    <section id="about">
-      <h1>Douglas Rowland</h1>
-      <p>Welcome to my Computer Science ePortfolio. This site showcases my completed capstone artifacts, enhancements, and the professional journey I’ve taken to get here.</p>
+    <section id="artifacts" class="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-icon">
+            <span class="material-icons">inventory_2</span>
+          </div>
+          <h3>Inventory Management App</h3>
+          <div class="tech-stack">
+            <span class="tech-tag">Android</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">SQLite</span>
+          </div>
+          <p>A robust Android-based inventory management solution with advanced features:</p>
+          <ul>
+            <li>Material Design UI with intuitive item management</li>
+            <li>Advanced search and sorting capabilities</li>
+            <li>Secure admin access controls</li>
+            <li>Performance-optimized data handling</li>
+            <li>Comprehensive activity logging</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">
+            <span class="material-icons">event</span>
+          </div>
+          <h3>Appointment Management System</h3>
+          <div class="tech-stack">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">JUnit 5</span>
+            <span class="tech-tag">OOP</span>
+          </div>
+          <p>A well-engineered appointment scheduling system featuring:</p>
+          <ul>
+            <li>Comprehensive data validation</li>
+            <li>95%+ test coverage</li>
+            <li>Clean code architecture</li>
+            <li>Object-oriented design patterns</li>
+            <li>Efficient in-memory data management</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="artifacts">
-      <h2>Artifacts</h2>
-      <p><strong>Appointment Management System</strong>: Focused on software design, structure, and high test coverage.</p>
-      <p><strong>Inventory App</strong>: Enhanced with sorting logic, searchable lists, admin access controls, logging, and performance optimizations.</p>
+    <section id="code-review" class="video-section">
+      <h2>Code Review & Documentation</h2>
+      <div class="video-container">
+        <p>Take a deep dive into my development process through this comprehensive code review:</p>
+        <div class="cta-button">
+          <a href="https://www.youtube.com/watch?v=Y0n7u0IcGJo" target="_blank" class="button">
+            <span class="material-icons">play_circle</span>
+            Watch Code Review
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="code-review">
-      <h2>Code Review Video</h2>
-      <p>Check out my video walkthrough explaining my artifact structure, the improvements made, and how they demonstrate core CS skills.</p>
-      <p><a href="https://www.youtube.com/watch?v=Y0n7u0IcGJo" target="_blank">Watch on YouTube</a></p>
-    </section>
-
-    <section id="downloads">
+    <section id="downloads" class="downloads-section">
       <h2>Project Downloads</h2>
-      <ul>
-        <li><a href="UPDATED_InventoryApp_DouglasRowland.zip" download>Download Updated Inventory App</a></li>
-        <li><a href="appointmentService_UPDATED.zip" download>Download Updated Appointment Management System</a></li>
-      </ul>
+      <div class="download-grid">
+        <div class="download-card">
+          <span class="material-icons">android</span>
+          <h3>Inventory App</h3>
+          <a href="UPDATED_InventoryApp_DouglasRowland.zip" download class="download-button">
+            <span class="material-icons">download</span>
+            Download Project
+          </a>
+        </div>
+        
+        <div class="download-card">
+          <span class="material-icons">schedule</span>
+          <h3>Appointment System</h3>
+          <a href="appointmentService_UPDATED.zip" download class="download-button">
+            <span class="material-icons">download</span>
+            Download Project
+          </a>
+        </div>
+      </div>
     </section>
   </div>
 
   <footer>
-    <p>© 2025 Douglas Rowland | SNHU Capstone Project</p>
+    <div class="container">
+      <p>© 2025 Douglas Rowland | Software Engineer</p>
+      <p>SNHU Computer Science Capstone Portfolio</p>
+    </div>
   </footer>
 </body>
 </html>
