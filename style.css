@@ -73,7 +73,7 @@ body {
 /* Hero Section */
 .hero {
   background: var(--primary);
-  padding: 8rem 2rem 6rem;
+  padding: 6rem 2rem 4rem;
   color: var(--text);
   position: relative;
   border-bottom: 1px solid var(--border);
@@ -131,17 +131,17 @@ h2, h3 {
 .project-grid {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  margin: 3rem auto;
+  gap: 3rem;
+  margin: 2rem auto;
   max-width: 900px;
 }
 
 .project-card {
   background: var(--primary);
   border: 1px solid var(--border);
-  padding: 4rem;
+  padding: 3rem;
   box-shadow: 0 15px 50px var(--shadow);
-  margin: 2rem 0;
+  margin: 1rem 0;
   transition: all 0.3s ease;
 }
 
@@ -152,7 +152,7 @@ h2, h3 {
 
 .project-icon {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .project-icon .material-icons {
@@ -170,7 +170,7 @@ h2, h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .tech-tag {
@@ -188,8 +188,8 @@ h2, h3 {
 .screenshots-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Show 2 images per row */
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .screenshot {
@@ -213,11 +213,11 @@ h2, h3 {
 .coverage-comparison {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 2rem;
+  margin-top: 2rem;
   background: var(--primary);
   border: 1px solid var(--border);
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 0 15px 35px var(--shadow);
 }
 
@@ -228,7 +228,7 @@ h2, h3 {
 .coverage-image p {
   font-family: var(--font-heading);
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--text);
 }
 
@@ -243,27 +243,27 @@ h2, h3 {
 .downloads-section {
   background: var(--primary);
   border: 1px solid var(--border);
-  padding: 6rem 4rem;
+  padding: 4rem 3rem;
   box-shadow: 0 15px 50px var(--shadow);
-  margin: 8rem 0;
+  margin: 4rem 0;
 }
 
 .download-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .download-card {
   background: var(--primary);
   border: 1px solid var(--border);
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 0 15px 35px var(--shadow);
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -299,8 +299,8 @@ h2, h3 {
 /* Video Section */
 .video-section {
   background: var(--gradient-dark);
-  padding: 6rem 4rem;
-  margin: 8rem 0;
+  padding: 4rem 3rem;
+  margin: 4rem 0;
 }
 
 .video-container {
@@ -314,7 +314,7 @@ footer {
   color: var(--light-text);
   padding: 2rem 0;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 footer p {
@@ -324,22 +324,22 @@ footer p {
 /* Professional Assessment section */
 #self-assessment {
   background: var(--gradient-light);
-  padding: 4rem;
-  margin-top: 4rem;
+  padding: 3rem;
+  margin-top: 2rem;
   border-radius: 2px;
   box-shadow: 0 15px 35px var(--shadow);
 }
 
 #self-assessment h2 {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--text);
 }
 
 #self-assessment p {
   font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--text);
 }
 
@@ -366,17 +366,17 @@ footer p {
   }
   
   .project-card {
-    padding: 2rem;
+    padding: 1.5rem;
   }
   
   .hero {
-    padding: 6rem 1.5rem 4rem;
+    padding: 5rem 1.5rem 3rem;
   }
 }
 
 /* Improve spacing between sections */
 section {
-  margin: 8rem 0;
+  margin: 4rem 0;
 }
 
 /* Update section headers */
@@ -384,7 +384,7 @@ section {
   font-family: var(--font-heading);
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   color: var(--text);
 }
 
